@@ -9,8 +9,6 @@
     "<THIRD_PARTY_MODULES>",
     "^[./]"
   ],
-  "importOrderParserPlugins" : ["typescript", "decorators-legacy"],
-  "experimentalBabelParserPluginsList": [
-    "typescript"
-  ]
+  "importOrderParserPlugins": ["typescript", "decorators-legacy"],
+  "experimentalBabelParserPluginsList": ["typescript"]
 }

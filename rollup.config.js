@@ -14,10 +14,7 @@ const bundle = (input, config) =>
     ...config,
     input,
     external: (id) => !/^[./]/.test(id),
-    plugins: [
-      ...(config.plugins || []),
-      bundleSize()
-    ]
+    plugins: [...(config.plugins || []), bundleSize()],
   })
 
 const config = defineConfig([
@@ -60,8 +57,9 @@ const config = defineConfig([
           {
             src: './z.d.ts',
             dest: 'dist',
-            transform: (contents) => contents.toString().replaceAll('./dist', '.'),
-          }
+            transform: (contents) =>
+              contents.toString().replaceAll('./dist', '.'),
+          },
         ],
       }),
     ],
